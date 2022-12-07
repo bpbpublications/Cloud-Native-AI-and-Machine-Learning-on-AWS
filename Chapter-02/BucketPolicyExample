@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Id": "BucketPolicyAllowCarlAccess",
+    "Statement": [
+        {
+            "Sid": "ExampleStatement01",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::11223344556677:user/EngineerCarl"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+                "arn:aws:s3:::data-lake-example-bucket/carl/*"
+            ]
+        }
+    ]
+}
